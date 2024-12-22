@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+import { useAppSelector } from "./hooks/useAppHooks";
 
 import Customer from "./features/customers/Customer";
 import BalanceDisplay from "./features/accounts/BalanceDisplay";
@@ -6,7 +6,7 @@ import CreateCustomer from "./features/customers/CreateCustomer";
 import AccountOperations from "./features/accounts/AccountOperations";
 
 export default function App() {
-  const fullName = useSelector((state) => state.customer.fullName);
+  const fullName = useAppSelector((state) => state.customers.fullName);
 
   return (
     <div>

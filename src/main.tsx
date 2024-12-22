@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import App from "./App.tsx";
 import "./index.css";
 
-import store from "./store";
+import { store } from "./store.ts";
 
 console.log(store.getState());
 

@@ -1,7 +1,7 @@
-import { useSelector } from "react-redux";
+import { useAppSelector } from "../../hooks/useAppHooks";
 
 export default function Customer() {
-  const customer = useSelector((store) => store.customer.fullName);
+  const fullName = useAppSelector((store) => store.customers.fullName);
 
-  return <h2>👋 Welcome, {customer}</h2>;
+  return <h2>👋 Welcome, {fullName}</h2>;
 }

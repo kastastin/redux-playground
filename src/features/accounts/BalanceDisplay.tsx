@@ -1,8 +1,8 @@
-import { useSelector } from "react-redux";
+import { useAppSelector } from "../../hooks/useAppHooks";
 import formatCurrency from "../../utils/formatCurrency";
 
 export default function BalanceDisplay() {
-  const balance = useSelector((state) => state.account.balance);
+  const balance = useAppSelector((state) => state.accounts.balance);
 
   return <div className="balance">{formatCurrency(balance)}</div>;
 }
